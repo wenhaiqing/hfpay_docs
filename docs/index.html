@@ -11,10 +11,41 @@
 <body>
   <div id="app"></div>
   <script>
-    window.$docsify = {
-      name: '',
-      repo: ''
-    }
+      window.$docsify = {
+          name: 'WQH',
+          repo: 'wqh',
+          loadSidebar: 'summary.md',
+          fallbackLanguages: ['zh-cn'],
+          mergeNavbar: true,
+          themeColor: '#3F51B5',
+          auto2top: true,
+          autoHeader: false,
+          subMaxLevel: 4,
+          search: {
+              depth: 6,
+              noData: {
+                  '/en/': 'No results!',
+                  '/zh-cn/': '没有找到结果!',
+                  '/zh-hk/': '沒有找到結果!',
+                  '/zh-tw/': '沒有找到結果!',
+                  '/': '没有找到结果!'
+              },
+              paths: 'auto',
+              placeholder: {
+                  '/en/': 'Type to Search',
+                  '/zh-cn/': '输入关键词搜索',
+                  '/zh-hk/': '輸入關鍵詞搜索',
+                  '/zh-tw/': '輸入關鍵詞搜索',
+                  '/': '输入关键词搜索'
+              }
+          },
+          alias: {
+              '/summary.md': './zh-cn/summary.md'
+          },
+          plantuml: {
+              skin: 'classic',
+          }
+      }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 </body>
